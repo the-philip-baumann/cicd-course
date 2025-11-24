@@ -56,5 +56,5 @@ jobs:
           name: build
           path: .
 
-      - name: Maven Tests
-        run: mvn -B test
+      - name: Tests ausführen
+        run: mvn -B test -Dmaven.compiler.skip=true
