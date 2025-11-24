@@ -1,4 +1,4 @@
-name: Build (branch + master)
+name: Build (branch + main)
 
 on:
   push:
@@ -17,8 +17,8 @@ jobs:
 
       - name: Merge aktuelles master in Branch (ohne Commit)
         run: |
-          git fetch origin master
-          git merge --no-commit --no-ff origin/master || {
+          git fetch origin main
+          git merge --no-commit --no-ff origin/main || {
             echo "Merge-Konflikte – Build abgebrochen.";
             exit 1;
           }
