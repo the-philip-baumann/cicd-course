@@ -35,5 +35,7 @@ jobs:
 
 Im Step `build` sollt ihr nun versuchen den Branch, welcher den Pipeline-Run getriggert hat auszuchecken. Anschliessend den aktuellen Stand des Master-Branches in euren Branch hineinziehen und abschliessend einen Maven-Build durchführen (Achtung: Ihr müsst wohl zuerst noch sicherstellen, dass der Pipeline-Run über die JDK-17 verfügt).
 
+### Workflow permissions
+Damit das ganze auch funktioniert, müsst ihr Github-Actions die nötigen Berechtigungen auf eurem Github-Repo vergeben.
 
 
