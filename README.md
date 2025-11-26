@@ -33,6 +33,19 @@ jobs:
             ...
 ```
 
+Ein Step besteht aus ein oder mehreren Anweisungen. Eine solche Anweisung startet mit einem `-name: Name der Anweisung` und auf der folgenden Zeile kommt dann die Anweisung. In diesem Fall `run: Befehl`.
+Der `Befehl` kann irgend eine Anweisung auf der Kommandozeile (Ubuntu CLI) sein.
+
+```
+jobs:
+    runs-on: ubuntu-latest
+    
+    steps:
+        stepName:
+          - name: Build (Maven)
+            run: echo 'Hello World.'
+```
+
 Im Step `build` sollt ihr nun versuchen den Branch, welcher den Pipeline-Run getriggert hat auszuchecken. Anschliessend den aktuellen Stand des Master-Branches in euren Branch hineinziehen und abschliessend einen Maven-Build durchführen (Achtung: Ihr müsst wohl zuerst noch sicherstellen, dass der Pipeline-Run über die JDK-17 verfügt).
 
 ### Workflow permissions
